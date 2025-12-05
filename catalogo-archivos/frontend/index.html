@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Sistema de Archivos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center min-vh-100">
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h3>Sistema de Archivos Digitales</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="nav nav-tabs" id="authTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab">Iniciar Sesión</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab">Registrarse</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content p-3" id="authTabsContent">
+                            <!-- Formulario de Login -->
+                            <div class="tab-pane fade show active" id="login" role="tabpanel">
+                                <form id="login-form">
+                                    <div class="mb-3">
+                                        <label for="login-email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="login-email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="login-password" class="form-label">Contraseña</label>
+                                        <input type="password" class="form-control" id="login-password" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+                                </form>
+                            </div>
+                            
+                            <!-- Formulario de Registro -->
+                            <div class="tab-pane fade" id="register" role="tabpanel">
+                                <form id="register-form">
+                                    <div class="mb-3">
+                                        <label for="register-nombre" class="form-label">Nombre Completo</label>
+                                        <input type="text" class="form-control" id="register-nombre" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="register-email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="register-email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="register-tipo" class="form-label">Tipo de Usuario</label>
+                                        <select class="form-select" id="register-tipo" required>
+                                            <option value="">Seleccione un tipo</option>
+                                            <option value="cliente">Cliente</option>
+                                            <option value="administrador">Administrador</option>
+                                        </select>
+                                        <div class="form-text">
+                                            Los usuarios administradores tendrán acceso al panel de control completo.
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="register-password" class="form-label">Contraseña</label>
+                                        <input type="password" class="form-control" id="register-password" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="register-confirm-password" class="form-label">Confirmar Contraseña</label>
+                                        <input type="password" class="form-control" id="register-confirm-password" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-success w-100">Registrarse</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="auth-result" class="mt-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
