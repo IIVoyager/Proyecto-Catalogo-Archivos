@@ -1,0 +1,21 @@
+{
+    "name": "catalogo-archivos/sistema",
+    "description": "Sistema de gestión de archivos con autenticación de usuarios",
+    "type": "project",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "CatalogoArchivos\\": "backend/src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Angel David Carrillo Pascual",
+            "email": "angel.carrillopas@alumno.buap.mx"
+        }
+    ],
+    "minimum-stability": "stable",
+    "config": {
+        "vendor-dir": "vendor"
+    }
+}
